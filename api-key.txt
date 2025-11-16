@@ -1,0 +1,2 @@
+{API KEY} <- Você deve inserir sua chave da weatherAPI aqui !
+
