@@ -1,0 +1,1 @@
+&{API_KEY} <- substitua pela sua key da weather api.

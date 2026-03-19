@@ -1,13 +1,16 @@
+package org.example;
+
 import org.json.JSONObject;
+
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
 	
@@ -35,7 +38,6 @@ public class ProjetoSistemaDeInformacoesClimaticasEmTempoReal {
 
 		String formataNomeCidade = URLEncoder.encode(cidade, StandardCharsets.UTF_8);
 		String apiUrl = "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + formataNomeCidade;
-		System.out.println("URL: " + apiUrl);
 		HttpRequest request = HttpRequest.newBuilder() // Começa a construção de uma solicitação HTTP
 				  .uri(URI.create(apiUrl)) // Este método define o URI da solicitação http
 				  .build(); // Finaliza a construção da solicitação http
